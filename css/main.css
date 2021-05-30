@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+}
+
+.card > *:not(a) {
+  margin-bottom: 2em;
+}
+
+.card {
+  height: 500px;
+  width: 350px;
+  padding: 3em 3em;
+  color: white;
+}
+
+.card h2 {
+  font-family: big shoulders display;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.card p {
+  font-family: lexend deca;
+  font-weight: 400;
+  width: 250px;
+  line-height: 30px;
+  opacity: 0.6;
+}
+
+.card a {
+  color: red;
+  background: white;
+  border-radius: 40px;
+  padding: 17px 40px;
+  text-decoration: none;
+  font-family: lexend deca;
+  position: relative;
+  top: 15px;
+}
+
+.card1 {
+  background: #e38826;
+  border-radius: 10px 10px 0 0;
+}
+
+.card1 a {
+  color: #e38826;
+}
+
+.card1 a:active {
+  color: white;
+  background: none;
+  border: 2px solid white;
+}
+
+.card2 {
+  background: #006970;
+}
+
+.card2 a {
+  color: #006970;
+}
+
+.card2 a:active {
+  color: white;
+  background: none;
+  border: 2px solid white;
+}
+
+.card3 {
+  background: #004241;
+  border-radius: 0 0 10px 10px;
+}
+
+.card3 a {
+  color: #004241;
+}
+
+.card3 a:active {
+  color: white;
+  background: none;
+  border: 2px solid white;
+}
+
+.attribution {
+  margin: 20px auto;
+}
+
+@media only screen and (min-width: 1150px) {
+  body {
+    padding: 50px;
+  }
+  .card1 {
+    border-radius: 10px 0 0 10px;
+  }
+  .card3 {
+    border-radius: 0 10px 10px 0;
+  }
+  .attribution {
+    margin: 20px 0 0 0;
+  }
+  .flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,126 @@
+// Lexend+Deca Font
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+// Big Shoulder Display Font
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;400;700&display=swap");
+
+// Color variables
+$colors: (
+  bright-orange: hsl(31, 77%, 52%),
+  dark-cyan: hsl(184, 100%, 22%),
+  darker-cyan: hsl(179, 100%, 13%),
+);
+
+// Sets a function to call for the color variables
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// Resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.card > *:not(a) {
+  margin-bottom: 2em;
+}
+.card {
+  height: 500px;
+  width: 350px;
+  padding: 3em 3em;
+  color: white;
+  h2 {
+    font-family: big shoulders display;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+  p {
+    font-family: lexend deca;
+    font-weight: 400;
+    width: 250px;
+    line-height: 30px;
+    opacity: 0.6;
+  }
+  a {
+    color: red;
+    background: white;
+    border-radius: 40px;
+    padding: 17px 40px;
+    text-decoration: none;
+    font-family: lexend deca;
+    position: relative;
+    top: 15px;
+  }
+}
+
+// Creates a block of styles that can be called multiple times for :active state of the "Learn More" acnhor tag
+@mixin active {
+  &:active {
+    color: white;
+    background: none;
+    border: 2px solid white;
+  }
+}
+
+.card1 {
+  background: color(bright-orange);
+  border-radius: 10px 10px 0 0;
+  a {
+    color: color(bright-orange);
+    @include active;
+  }
+}
+
+.card2 {
+  background: color(dark-cyan);
+  a {
+    color: color(dark-cyan);
+    @include active;
+  }
+}
+
+.card3 {
+  background: color(darker-cyan);
+  border-radius: 0 0 10px 10px;
+  a {
+    color: color(darker-cyan);
+    @include active;
+  }
+}
+
+.attribution {
+  margin: 20px auto;
+}
+@media only screen and (min-width: 1150px) {
+  body {
+    padding: 50px;
+  }
+  .card1 {
+    border-radius: 10px 0 0 10px;
+  }
+  .card3 {
+    border-radius: 0 10px 10px 0;
+  }
+  .attribution {
+    margin: 20px 0 0 0;
+  }
+  .flex-container {
+    flex-flow: row nowrap;
+  }
+}
